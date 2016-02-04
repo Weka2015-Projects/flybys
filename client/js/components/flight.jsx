@@ -9,7 +9,7 @@ class Flight extends Component {
     return(
       <div className="flight col-md-12">
         <h3>{destination}</h3>
-        <h5>{price}</h5>
+        <h4>{price}</h4>
         <p>Departure: {departure}</p>
         <p>Return: {returnDate}</p>
         <p>Airline: {airline}</p>
