@@ -32,6 +32,7 @@ var public = new Router()
 
 public.get('/', function*() {
   this.body = yield this.render('login')
+  
 })
 
 public.post('/custom', function*(next) {
