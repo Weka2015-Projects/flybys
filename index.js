@@ -61,11 +61,12 @@ publicRouter.post('/custom', function*(next) {
 
 // POST /login
 publicRouter.post('/login',
-  passport.authenticate('local', {
-    successRedirect: '/user-profile',
-    failureRedirect: '/'
-  })
-)
+  passport.authenticate('local'),
+
+  function *(next){
+    const res = yield this.knex.raw('select * from users where email = ?', [this.request.body.username])
+    this.body = res.rows[0]
+})
 
 // POST /users
 publicRouter.post('/users', function *(next) {
