@@ -22,7 +22,7 @@ app.use(koaBody({
 }))
 
 router.get('/flights/:cityname/:maxprice/:date', function *(next) {
-  const flightResults = yield request.get("https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=Jl3AX6FJxrsT33cqi0SkZPzChIlOdXsF&origin=" + this.params.cityname + "&departure_date=" + this.params.date + "&max_price=" + this.params.maxprice)
+  const flightResults = yield request.get("https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=" + process.env.AMADEUS_KEY + "&origin=" + this.params.cityname + "&departure_date=" + this.params.date + "&max_price=" + this.params.maxprice)
   this.set('Content-Type', 'application/json')
   this.body = JSON.stringify(flightResults.body)
 })
