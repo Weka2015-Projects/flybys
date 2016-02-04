@@ -32,5 +32,3 @@ passport.use(new LocalStrategy(function(email, password, done) {
     }
   })
 }))
-
-//install knex regular
