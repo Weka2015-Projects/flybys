@@ -10,14 +10,13 @@ const knex = require('knex')({
   searchPath: 'public'
 })
 const passport = require('koa-passport')
-const user = { id: 1, email: '' }
 
 passport.serializeUser(function(user, done) {
   done(null, user.id)
 })
 
 passport.deserializeUser(function(id, done) {
-  done(null, user)
+  done(null, id)
 })
 
 var LocalStrategy = require('passport-local').Strategy
@@ -27,7 +26,7 @@ passport.use(new LocalStrategy(function(email, password, done) {
       done(null, false)
     }
     else if (email === resp.rows[0].email && password === resp.rows[0].password) {
-      done(null, user)
+      done(null, resp.rows[0])
     } else {
       done(null, false)
     }
