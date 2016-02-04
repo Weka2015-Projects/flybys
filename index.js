@@ -11,8 +11,6 @@ const dotenv = require('dotenv')
 dotenv.load()
 var todayDate = new Date()
 
-
-
 app.use(koaBody({
   extendTypes: {
     // will parse application/x-javascript type body as a JSON string
