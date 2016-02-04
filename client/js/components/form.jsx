@@ -19,7 +19,7 @@ class Form extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
+      <form className="search" onSubmit={this.handleSubmit.bind(this)}>
         <input type="text" ref="city"></input>
         <input type="number" ref="price"></input>
         <button type="submit">Search</button>

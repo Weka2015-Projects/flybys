@@ -19755,6 +19755,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'site-title' },
+	          'Flybys'
+	        ),
 	        _react2.default.createElement(_form2.default, { submitCallback: this.submitCallback.bind(this) }),
 	        _react2.default.createElement(_flightContainer2.default, { flights: flights })
 	      );
@@ -19826,7 +19831,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'form',
-	        { onSubmit: this.handleSubmit.bind(this) },
+	        { className: 'search', onSubmit: this.handleSubmit.bind(this) },
 	        _react2.default.createElement('input', { type: 'text', ref: 'city' }),
 	        _react2.default.createElement('input', { type: 'number', ref: 'price' }),
 	        _react2.default.createElement(
