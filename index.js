@@ -1,6 +1,7 @@
 'use strict'
 
 const koa = require('koa')
+const serve = require('koa-static');
 const koaBody = require('koa-better-body')
 const Router = require('koa-router')
 const request = require('superagent')
@@ -24,7 +25,8 @@ app.use(passport.session())
 
 const views = require('koa-render')
 app.use(views('./views', {
-  map: { html: 'handlebars' },
+  map: { html: 'handlebars',
+        css: 'css'},
   cache: false
 }))
 
@@ -80,6 +82,7 @@ app.use(function*(next) {
 })
 
 
+app.use(serve(__dirname + '/public'));
 
 const secured = new Router()
 
