@@ -20,9 +20,13 @@ class Form extends Component {
   render() {
     return (
       <form className="search" onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text" ref="city"></input>
-        <input type="number" ref="price"></input>
-        <button type="submit">Search</button>
+      <div className="form-group">
+        <label className="control-label">Your Location:</label>
+        <input type="text" ref="city" className="form-control" id="origincity"></input>
+        <label className="control-label">Maximum Price:</label>
+        <input type="number" ref="price" className="form-control" id="amounttospend"></input>
+        <button type="submit" className="btn btn-default">Search</button>
+                </div>
       </form>
     )
   }

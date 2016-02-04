@@ -1,5 +1,19 @@
-.flights {
-  background-color: red;
+input {
+	padding-right: 10px;
 }
 
+label {
+	padding-top: 10px;
+}
+
+button {
+	margin-top: 10px;
+}
+
+.form-group {
+	width: 50%;
+	margin: 0;
+	float: left;
+	display: inline-block;
+}
 /*# sourceMappingURL=main.css.map */

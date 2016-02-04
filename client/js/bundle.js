@@ -19714,7 +19714,7 @@
 
 	var _form2 = _interopRequireDefault(_form);
 
-	var _flightContainer = __webpack_require__(264);
+	var _flightContainer = __webpack_require__(263);
 
 	var _flightContainer2 = _interopRequireDefault(_flightContainer);
 
@@ -19832,12 +19832,26 @@
 	      return _react2.default.createElement(
 	        'form',
 	        { className: 'search', onSubmit: this.handleSubmit.bind(this) },
-	        _react2.default.createElement('input', { type: 'text', ref: 'city' }),
-	        _react2.default.createElement('input', { type: 'number', ref: 'price' }),
 	        _react2.default.createElement(
-	          'button',
-	          { type: 'submit' },
-	          'Search'
+	          'div',
+	          { className: 'form-group' },
+	          _react2.default.createElement(
+	            'label',
+	            { className: 'control-label' },
+	            'Your Location:'
+	          ),
+	          _react2.default.createElement('input', { type: 'text', ref: 'city', className: 'form-control', id: 'origincity' }),
+	          _react2.default.createElement(
+	            'label',
+	            { className: 'control-label' },
+	            'Maximum Price:'
+	          ),
+	          _react2.default.createElement('input', { type: 'number', ref: 'price', className: 'form-control', id: 'amounttospend' }),
+	          _react2.default.createElement(
+	            'button',
+	            { type: 'submit', className: 'btn btn-default' },
+	            'Search'
+	          )
 	        )
 	      );
 	    }
@@ -34060,8 +34074,7 @@
 	}));
 
 /***/ },
-/* 263 */,
-/* 264 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34076,7 +34089,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _flight = __webpack_require__(265);
+	var _flight = __webpack_require__(264);
 
 	var _flight2 = _interopRequireDefault(_flight);
 
@@ -34120,7 +34133,7 @@
 	exports.default = FlightContainer;
 
 /***/ },
-/* 265 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -34166,32 +34179,70 @@
 	        "div",
 	        { className: "flight col-md-12" },
 	        _react2.default.createElement(
-	          "h3",
-	          null,
-	          destination
-	        ),
-	        _react2.default.createElement(
-	          "h5",
-	          null,
-	          price
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "Departure: ",
-	          departure
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "Return: ",
-	          returnDate
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "Airline: ",
-	          airline
+	          "table",
+	          { className: "table table-hover table table-striped" },
+	          _react2.default.createElement(
+	            "tr",
+	            null,
+	            _react2.default.createElement(
+	              "th",
+	              null,
+	              "Destination"
+	            ),
+	            _react2.default.createElement(
+	              "th",
+	              null,
+	              "Price"
+	            ),
+	            _react2.default.createElement(
+	              "th",
+	              null,
+	              "Date Departing"
+	            ),
+	            _react2.default.createElement(
+	              "th",
+	              null,
+	              "Returning"
+	            ),
+	            _react2.default.createElement(
+	              "th",
+	              null,
+	              "Airline"
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "tbody",
+	            null,
+	            _react2.default.createElement(
+	              "tr",
+	              null,
+	              _react2.default.createElement(
+	                "td",
+	                null,
+	                destination
+	              ),
+	              _react2.default.createElement(
+	                "td",
+	                null,
+	                price
+	              ),
+	              _react2.default.createElement(
+	                "td",
+	                null,
+	                departure
+	              ),
+	              _react2.default.createElement(
+	                "td",
+	                null,
+	                returnDate
+	              ),
+	              _react2.default.createElement(
+	                "td",
+	                null,
+	                airline
+	              )
+	            )
+	          )
 	        )
 	      );
 	    }

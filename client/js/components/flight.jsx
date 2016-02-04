@@ -8,11 +8,24 @@ class Flight extends Component {
     const { airline, departure, returnDate, price, destination} = this.props
     return(
       <div className="flight col-md-12">
-        <h3>{destination}</h3>
-        <h5>{price}</h5>
-        <p>Departure: {departure}</p>
-        <p>Return: {returnDate}</p>
-        <p>Airline: {airline}</p>
+      <table className="table table-hover table table-striped">
+      <tr>
+      <th>Destination</th>
+      <th>Price</th>
+      <th>Date Departing</th>
+      <th>Returning</th>
+      <th>Airline</th>
+      </tr>
+      <tbody>
+      <tr>
+        <td>{destination}</td>
+        <td>{price}</td>
+        <td>{departure}</td>
+        <td>{returnDate}</td>
+        <td>{airline}</td>
+      </tr>
+      </tbody>
+        </table>
       </div>
     )
   }
