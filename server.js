@@ -81,5 +81,4 @@ secured.get('/user-profile', function*() {
 
 app.use(secured.middleware())
 
-// start server
 app.listen(process.env.PORT || 3000)

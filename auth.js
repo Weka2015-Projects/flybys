@@ -4,13 +4,13 @@ const knex = require('knex')({
   client: 'pg',
   connection: {
     host: '127.0.0.1',
-    port: '5000',
+    port: '5432',
     database: dbName
   },
   searchPath: 'public'
 })
 const passport = require('koa-passport')
-const user = { id: 1, username: 'test' }
+const user = { id: 1, email: '' }
 
 passport.serializeUser(function(user, done) {
   done(null, user.id)
