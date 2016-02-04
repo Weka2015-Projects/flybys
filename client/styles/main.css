@@ -16,4 +16,8 @@ button {
 	float: left;
 	display: inline-block;
 }
+
+table {
+	margin-top: 10px;
+}
 /*# sourceMappingURL=main.css.map */
