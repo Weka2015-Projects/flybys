@@ -8,4 +8,15 @@
 button {
   margin-top: 10px;
 }
+
+body {
+  background-image: url('doge.jpg')
+}
+
+.form-wrapper {
+  width: 30%;
+  margin: 0;
+  float: left;
+  display: inline-block;
+}
 /*# sourceMappingURL=main.css.map */

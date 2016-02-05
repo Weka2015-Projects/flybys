@@ -8,7 +8,7 @@
       const { airline, departure, returnDate, price, destination} = this.props
       return(
         <div className="flight col-md-12">
-            <table className="table table-hover table table-striped">
+            <table className="table table-hover">
               <thead>
             <tr>
             <th>Destination</th>

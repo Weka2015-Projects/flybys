@@ -32,14 +32,14 @@ describe('API endpoints', () => {
     const fake_user = { "username": "camelSpace", "password": "snake"}
     const what_the = { "email": "plepepe", "password": "dunno"}
 
-    it('returns 200', function *() {
+    xit('returns 200', function *() {
       yield request.post('/users').send(real_user).expect(200).end()
     })
 
-    it('returns 401', function *() {
+    xit('returns 401', function *() {
       yield request.post('/users').send(fake_user).expect(401).end()
     })
-    it('returns 400', function *() {
+    xit('returns 400', function *() {
       yield request.post('/users').send(what_the).expect(400).end()
     })
   })

@@ -90,9 +90,13 @@
 	        'div',
 	        { className: 'container' },
 	        _react2.default.createElement(
-	          'h1',
-	          { className: 'site-title' },
-	          'Flybys'
+	          'div',
+	          { classaName: 'col-md-12' },
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'site-title' },
+	            'Get Outta Doge'
+	          )
 	        ),
 	        this.props.children
 	      );
@@ -19853,19 +19857,19 @@
 	          _react2.default.createElement(
 	            'label',
 	            { className: 'control-label' },
-	            'Your Location:'
+	            'Such Location:'
 	          ),
 	          _react2.default.createElement('input', { type: 'text', ref: 'city', className: 'form-control', id: 'origincity' }),
 	          _react2.default.createElement(
 	            'label',
 	            { className: 'control-label' },
-	            'Maximum Price:'
+	            'Many Price:'
 	          ),
 	          _react2.default.createElement('input', { type: 'number', ref: 'price', className: 'form-control', id: 'amounttospend' }),
 	          _react2.default.createElement(
 	            'button',
-	            { type: 'submit', className: 'btn btn-default' },
-	            'Search'
+	            { type: 'submit', className: 'btn btn-success' },
+	            'Much Search'
 	          )
 	        )
 	      );
@@ -34195,7 +34199,7 @@
 	        { className: "flight col-md-12" },
 	        _react2.default.createElement(
 	          "table",
-	          { className: "table table-hover table table-striped" },
+	          { className: "table table-hover" },
 	          _react2.default.createElement(
 	            "thead",
 	            null,
@@ -34364,13 +34368,13 @@
 	          _react2.default.createElement('input', { ref: 'passwordLogin', type: 'password', className: 'form-control' }),
 	          _react2.default.createElement(
 	            'button',
-	            { type: 'submit' },
+	            { type: 'submit', className: 'btn btn-success' },
 	            'Login'
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'form',
-	          { onSubmit: this.signUp.bind(this) },
+	          { onSubmit: this.signUp.bind(this), autoComplete: 'off' },
 	          _react2.default.createElement(
 	            'h3',
 	            null,
@@ -34390,7 +34394,7 @@
 	          _react2.default.createElement('input', { ref: 'passwordSignup', type: 'password', className: 'form-control' }),
 	          _react2.default.createElement(
 	            'button',
-	            { type: 'submit' },
+	            { type: 'submit', className: 'btn btn-success' },
 	            'Login'
 	          )
 	        )

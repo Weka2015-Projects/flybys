@@ -43,17 +43,17 @@ class Login extends Component {
           <input ref="emailLogin" type="text" className="form-control"></input>
           <label>Password:</label>
           <input ref="passwordLogin" type="password" className="form-control"></input>
-          <button type="submit">
+          <button type="submit" className="btn btn-success">
             Login
           </button>
         </form>
-        <form onSubmit={this.signUp.bind(this)}>
+        <form onSubmit={this.signUp.bind(this)} autoComplete="off">
           <h3>No account? Sign up</h3>
           <label>Email:</label>
           <input ref="emailSignup" type="text" className="form-control"></input>
           <label>Password:</label>
           <input ref="passwordSignup" type="password" className="form-control"></input>
-          <button type="submit">
+          <button type="submit" className="btn btn-success">
             Login
           </button>
         </form>

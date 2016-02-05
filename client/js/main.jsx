@@ -12,7 +12,9 @@ class Main extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="site-title">Flybys</h1>
+        <div classaName="col-md-12">
+        <h1 className="site-title">Get Outta Doge</h1>
+        </div>
         {this.props.children}
       </div>
     )
