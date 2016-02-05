@@ -13,6 +13,8 @@ const server = require('http').createServer(app.callback()).listen(port)
 const dotenv = require('dotenv')
 const session = require('koa-generic-session')
 app.keys = ['your-session-secret']
+app.use(serve(__dirname + '/client'))
+
 app.use(session())
 dotenv.load()
 
