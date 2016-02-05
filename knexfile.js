@@ -5,8 +5,8 @@ module.exports =  {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'flight_search_alert',
-      user:     'apprentice',
+      database: 'flybys_development',
+      user:     'aaronrobb',
       password: '',
     },
     pool: {
@@ -21,7 +21,7 @@ module.exports =  {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'flight_search_alert_staging',
+      database: 'flybys_staging',
       user:     'email',
       password: 'password',
     },
@@ -37,7 +37,7 @@ module.exports =  {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'flight_search_alert_production',
+      database: 'flybys_production',
       user:     'email',
       password: 'password',
     },

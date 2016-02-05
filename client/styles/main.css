@@ -10,7 +10,8 @@ button {
 }
 
 body {
-  background-image: url('doge.jpg')
+  background-image: url('doge.jpg');
+  background-size: cover;
 }
 
 .form-wrapper {

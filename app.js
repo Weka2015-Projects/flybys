@@ -19,7 +19,7 @@ app.use(session())
 dotenv.load()
 
 //stuff for adding user
-const dbName = `flight_search_alert`
+const dbName = `flybys_development`
 
 
 app.use(knex({
@@ -76,7 +76,7 @@ publicRouter.post('/users', function *(next) {
     try {
       // One method is to use knex to build the query for you
       const res = yield this.knex('users').returning('*').insert({
-        email: this.request.body.email,
+        email: this.request.body.username,
         password: this.request.body.password
       })
       this.type = 'application/json'

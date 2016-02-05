@@ -22,7 +22,7 @@ class Login extends Component {
   }
   signUp(e){
     e.preventDefault()
-    request.post('/signup')
+    request.post('/users')
     .send({
       username: this.refs.emailSignup.value,
       password: this.refs.passwordSignup.value
@@ -30,7 +30,8 @@ class Login extends Component {
       if (err) {
 
       } else {
-
+        this.refs.emailSignup.value = ''
+        this.refs.passwordSignup.value = ''
       }
     })
   }
@@ -44,7 +45,7 @@ class Login extends Component {
           <label>Password:</label>
           <input ref="passwordLogin" type="password" className="form-control"></input>
           <button type="submit" className="btn btn-success">
-            Login
+            On log
           </button>
         </form>
         <form onSubmit={this.signUp.bind(this)} autoComplete="off">
@@ -54,7 +55,7 @@ class Login extends Component {
           <label>Password:</label>
           <input ref="passwordSignup" type="password" className="form-control"></input>
           <button type="submit" className="btn btn-success">
-            Login
+            Sign down
           </button>
         </form>
       </div>

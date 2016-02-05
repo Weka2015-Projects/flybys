@@ -34332,12 +34332,17 @@
 	  }, {
 	    key: 'signUp',
 	    value: function signUp(e) {
+	      var _this2 = this;
+
 	      e.preventDefault();
-	      _superagent2.default.post('/signup').send({
+	      _superagent2.default.post('/users').send({
 	        username: this.refs.emailSignup.value,
 	        password: this.refs.passwordSignup.value
 	      }).end(function (err, res) {
-	        if (err) {} else {}
+	        if (err) {} else {
+	          _this2.refs.emailSignup.value = '';
+	          _this2.refs.passwordSignup.value = '';
+	        }
 	      });
 	    }
 	  }, {
@@ -34369,7 +34374,7 @@
 	          _react2.default.createElement(
 	            'button',
 	            { type: 'submit', className: 'btn btn-success' },
-	            'Login'
+	            'On log'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -34395,7 +34400,7 @@
 	          _react2.default.createElement(
 	            'button',
 	            { type: 'submit', className: 'btn btn-success' },
-	            'Login'
+	            'Sign down'
 	          )
 	        )
 	      );

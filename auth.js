@@ -1,4 +1,4 @@
-const dbName = 'flight_search_alert'
+const dbName = 'flybys_development'
 
 const knex = require('knex')({
   client: 'pg',
