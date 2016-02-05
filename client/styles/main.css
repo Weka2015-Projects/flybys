@@ -1,5 +1,11 @@
-.flights {
-  background-color: red;
+.form-group {
+  width: 50%;
+  margin: 0;
+  float: left;
+  display: inline-block;
 }
 
+button {
+  margin-top: 10px;
+}
 /*# sourceMappingURL=main.css.map */

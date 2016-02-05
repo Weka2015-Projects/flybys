@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/app.jsx'
 import Login from './components/login.jsx'
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
 
 
 class Main extends Component {
@@ -12,6 +12,7 @@ class Main extends Component {
   render() {
     return (
       <div className="container">
+        <h1 className="site-title">Flybys</h1>
         {this.props.children}
       </div>
     )

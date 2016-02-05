@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "json": "json-server --watch db.json",
     "start": "node --harmony server"
   },
@@ -18,12 +18,25 @@
     "url": "https://github.com/Weka2015-Projects/flybys/issues"
   },
   "homepage": "https://github.com/Weka2015-Projects/flybys#readme",
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "chai": "^3.5.0",
+    "co-mocha": "^1.1.2",
+    "co-supertest": "0.0.10",
+    "history": "^1.17.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "supertest": "^1.1.0",
+    "webpack": "^1.12.12"
+  },
   "dependencies": {
     "dotenv": "^2.0.0",
     "handlebars": "^4.0",
+    "history": "^2.0.0",
     "jquery": "^2.2.0",
-    "json-server": "^0.8.7",
-    "jspm": "^0.16.26",
     "knex": "^0.9.0",
     "koa": "^1.1.2",
     "koa-better-body": "^1.0.17",
@@ -35,26 +48,16 @@
     "koa-resource-router": "^0.4.0",
     "koa-router": "^5.3.0",
     "koa-static": "^2.0.0",
+    "moment": "^2.11.2",
     "passport-facebook": "^2.0",
     "passport-google-auth": "^1.0",
     "passport-local": "^1.0",
     "passport-twitter": "^1.0",
     "pg": "^4.4.4",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^1.0.3",
     "regular": "^0.1.6",
     "superagent": "^1.7.2"
-  },
-  "jspm": {
-    "dependencies": {},
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-core": "^6.4.5",
-      "babel-loader": "^6.2.1",
-      "babel-preset-es2015": "^6.3.13",
-      "babel-preset-react": "^6.3.13",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4",
-      "webpack": "^1.12.12"
-
-    }
   }
 }

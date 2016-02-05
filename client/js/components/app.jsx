@@ -19,7 +19,6 @@ class App extends Component {
     const { flights } = this.state
     return (
       <div className="container">
-        <h1 className="site-title">Flybys</h1>
         <Form submitCallback={this.submitCallback.bind(this)}/>
         <FlightContainer flights={flights}/>
       </div>
